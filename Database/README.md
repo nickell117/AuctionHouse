@@ -1,3 +1,3 @@
 # Auction House Database
 ## Physical Database Design
-![Physical Database Design](AuctionPhysicalDesign.JPG)
+![Physical Database Design](AuctionsPhysicalDesign.JPG)
