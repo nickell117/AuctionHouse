@@ -1,2 +1,2 @@
-# AuctionHouse
+# Auction House
 Web Application Project
