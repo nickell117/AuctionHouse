@@ -32,8 +32,9 @@ CREATE TABLE USERS
   firstname   NVARCHAR(20)  NOT NULL,
   lastname    NVARCHAR(30)  NOT NULL,
   email	      NVARCHAR(40)  NOT NULL
+  
 CONSTRAINT PK_Users PRIMARY KEY(userid),
-  CONSTRAINT UNQ_User_email UNIQUE(email)
+CONSTRAINT UNQ_User_email UNIQUE(email)
 )
 ```
 
@@ -46,8 +47,8 @@ CREATE TABLE CATEGORY
 (
   categoryid      INT           NOT NULL IDENTITY,
   categoryname    NVARCHAR(20)  NOT NULL,
-  CONSTRAINT PK_Category PRIMARY KEY(categoryid),
-  CONSTRAINT UNQ_Category_Name UNIQUE(categoryname)
+CONSTRAINT PK_Category PRIMARY KEY(categoryid),
+CONSTRAINT UNQ_Category_Name UNIQUE(categoryname)
 )
 ```
 
@@ -67,10 +68,10 @@ CREATE TABLE LISTINGS
   categoryid    INT           NOT NULL,
   userid        INT           NOT NULL,
 
-  CONSTRAINT PK_ListingID PRIMARY KEY(listingid),
-  CONSTRAINT FK_Category FOREIGN KEY(categoryid)
+CONSTRAINT PK_ListingID PRIMARY KEY(listingid),
+CONSTRAINT FK_Category FOREIGN KEY(categoryid)
     REFERENCES CATEGORY(categoryid),
-  CONSTRAINT FK_Users_id FOREIGN KEY(userid)
+CONSTRAINT FK_Users_id FOREIGN KEY(userid)
     REFERENCES USERS(userid),
 )
 ```
@@ -86,10 +87,10 @@ CREATE TABLE BID
   timestamp   DATETIME  NOT NULL,
   listingid   INT		NOT NULL,
   userid      INT		NOT NULL
-  CONSTRAINT PK_BidID PRIMARY KEY(bidid),
-  CONSTRAINT FK_Users_BID FOREIGN KEY(userid)
+CONSTRAINT PK_BidID PRIMARY KEY(bidid),
+CONSTRAINT FK_Users_BID FOREIGN KEY(userid)
     REFERENCES USERS(userid),
-  CONSTRAINT FK_Listing_id FOREIGN KEY(listingid)
+CONSTRAINT FK_Listing_id FOREIGN KEY(listingid)
     REFERENCES LISTINGS(listingid),
 )
 ```
