@@ -60,12 +60,12 @@ CREATE TABLE LISTINGS
 (
   listingid     INT           NOT NULL IDENTITY,
   description   NVARCHAR(250) NULL,
-  startbid		MONEY		  NULL,
-  currentbid    MONEY		  NULL,
-  starttime		DATETIME	  NOT NULL,
-  endtime		DATETIME	  NOT NULL,
-  categoryid	INT			  NOT NULL,
-  userid		INT			  NOT NULL,
+  startbi       MONEY         NULL,
+  currentbid    MONEY         NULL,
+  starttim      DATETIME      NOT NULL,
+  endtime       DATETIME      NOT NULL,
+  categoryid    INT           NOT NULL,
+  userid        INT           NOT NULL,
 
   CONSTRAINT PK_ListingID PRIMARY KEY(listingid),
   CONSTRAINT FK_Category FOREIGN KEY(categoryid)
